@@ -30,9 +30,9 @@ if [ -f "$VAULT/wiki/index.md" ]; then
   echo "----- wiki/index.md -----"
   cat "$VAULT/wiki/index.md"
 elif [ -f "$VAULT/CLAUDE.md" ]; then
-  echo "Lorekeep: constitution found at $VAULT/CLAUDE.md but no wiki/index.md. Run the scaffold skill to build the vault tree."
+  echo "Lorekeep: constitution found at $VAULT/CLAUDE.md but no wiki/index.md. Run the onboard skill to finish setup, or scaffold to build the vault tree."
 else
-  echo "Lorekeep: no vault found here. Run the elicit skill to start one, or the scaffold skill to create the tree."
+  echo "Lorekeep: first run, no vault found here. Run the onboard skill to get set up and learn the user. Say \"onboard me\" or \"get started\"."
 fi
 
 exit 0

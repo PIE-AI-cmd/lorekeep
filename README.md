@@ -24,41 +24,35 @@ Everything stays on your machine. No server, no telemetry, no content leaves the
 - **Ripple as proposal.** When a new source contradicts your canon, the conflict is surfaced as
   a proposal for you to decide, never written across your pages unattended.
 
-## What it installs
+## Getting started
 
-Five skills and two hooks:
-
-- `elicit` : the interview engine that learns you and fills the raw tier.
-- `scaffold` : creates the vault tree (raw, wiki, oplog, quarantine, constitution).
-- `promote` : the governed gate from raw to wiki to canon, writing the oplog.
-- `hooks/load-vault-context.sh` : on session start, loads your index, read only.
-- `hooks/capture-to-raw.sh` : on session end, captures a stub to the raw tier only, never canon.
-
-## Install
-
-Lorekeep is a Claude Code plugin. Until it is on a marketplace, install it straight from this
-repo.
-
-Clone and point Claude Code at it:
+Install Claude Code, then clone and run Lorekeep:
 
 ```
 git clone https://github.com/PIE-AI-cmd/lorekeep.git
 claude --plugin-dir ./lorekeep
 ```
 
-Or, if your Claude Code version supports direct install:
+Then, in the session, say **"onboard me"**. The `onboard` skill sets you up and learns you: it
+checks your experience level, scaffolds a vault, asks the few highest-leverage questions, and
+gives you a quick first win, adapting as it goes. Full setup, including how to install Claude
+Code on each platform, is in `skills/onboard/references/setup.md`.
 
-```
-claude plugin install PIE-AI-cmd/lorekeep
-```
+New to Claude Code? On Windows PowerShell: `irm https://claude.ai/install.ps1 | iex`. On macOS,
+Linux, or WSL: `curl -fsSL https://claude.ai/install.sh | bash`. Reopen the terminal, then run
+`claude doctor` to confirm. You need a Claude account on a plan that includes Claude Code.
 
-Then, in a session, say "set up a vault" to run scaffold, or "learn about me" to run elicit.
+## What it installs
 
-Optional: set `LOREKEEP_VAULT` to your vault path so the hooks always find it.
+Five skills and two hooks:
 
-```
-export LOREKEEP_VAULT="$HOME/my-vault"
-```
+- `onboard` : first-run setup plus a fast, adaptive interview that gets you productive quickly.
+- `elicit` : the deeper interview that keeps learning you over time.
+- `scaffold` : creates the vault tree (raw, wiki, oplog, quarantine, constitution).
+- `promote` : the governed gate from raw to wiki to canon, writing the oplog.
+- `hooks/load-vault-context.sh` : on session start, loads your index, read only, and points
+  first-run users to `onboard`.
+- `hooks/capture-to-raw.sh` : on session end, captures a stub to the raw tier only, never canon.
 
 ## The vault it builds
 
