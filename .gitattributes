@@ -1,0 +1,6 @@
+# Keep hook scripts LF so they run on macOS and Linux testers.
+# CRLF in a shebang line breaks bash on Unix.
+*.sh text eol=lf
+
+# Normalise everything else, let git detect text vs binary.
+* text=auto
