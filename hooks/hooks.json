@@ -1,0 +1,25 @@
+{
+  "//": "Skeleton. Validate against the current schema with `claude plugin validate`. The two scripts referenced below are stubs to be written. CRITICAL: capture-to-raw.sh writes ONLY to vault/raw/ (quarantine). It must never touch wiki/ or CLAUDE.md. Promotion to canon is always a manual rewrite.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PLUGIN_ROOT/hooks/load-vault-context.sh"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PLUGIN_ROOT/hooks/capture-to-raw.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

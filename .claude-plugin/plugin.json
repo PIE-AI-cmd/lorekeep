@@ -1,0 +1,20 @@
+{
+  "name": "lorekeep",
+  "version": "0.1.0",
+  "description": "Learns a new user through a structured interview, then scaffolds a personalised local Markdown knowledge vault. Methodology only: captures no content, sends nothing off-device, and never writes to canon without explicit approval. Use whenever a user wants to onboard, personalise their setup, or teach Claude their voice, brand, clients, colleagues, competitors, and workflows.",
+  "author": {
+    "name": "Piers Butler",
+    "url": "https://laurelinlabs.com"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/PIE-AI-cmd/lorekeep",
+  "keywords": [
+    "personalisation",
+    "onboarding",
+    "knowledge-management",
+    "local-first",
+    "elicitation",
+    "vault"
+  ],
+  "hooks": "./hooks/hooks.json"
+}

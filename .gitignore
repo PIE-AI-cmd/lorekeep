@@ -1,0 +1,23 @@
+# Lorekeep ignores
+# Never commit a user's vault or captured content. Ship patterns, keep payloads.
+my-vault/
+vault/
+*.vault/
+raw/
+quarantine/
+
+# Internal strategy docs: keep local, never publish.
+docs/adoption-proposal.md
+docs/chat-handover.md
+docs/integration-notes.md
+docs/product-spec-v0.1.md
+
+# OS and editor cruft
+.DS_Store
+Thumbs.db
+.obsidian/
+*.swp
+*.tmp
+
+# Node, if tooling is added later
+node_modules/
