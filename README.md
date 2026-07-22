@@ -1,6 +1,7 @@
 # Lorekeep
 
-A local first Claude Code plugin that learns you, then keeps your knowledge true as it grows.
+A local first plugin that learns you, then keeps your knowledge true as it grows. Runs in Claude
+Code and in the Cowork desktop app.
 
 Most memory tools observe you quietly and write what they infer straight into the assistant's
 context. Lorekeep does the opposite. It asks, you answer, and nothing becomes authoritative
@@ -26,33 +27,38 @@ Everything stays on your machine. No server, no telemetry, no content leaves the
 
 ## Getting started
 
-Install Claude Code, then clone and run Lorekeep:
+In Claude Code, install the CLI, then clone and run:
 
 ```
 git clone https://github.com/PIE-AI-cmd/lorekeep.git
 claude --plugin-dir ./lorekeep
 ```
 
-Then, in the session, say **"onboard me"**. The `onboard` skill sets you up and learns you: it
-checks your experience level, scaffolds a vault, asks the few highest-leverage questions, and
-gives you a quick first win, adapting as it goes. Full setup, including how to install Claude
-Code on each platform, is in `skills/onboard/references/setup.md`.
+In Cowork, install the plugin and connect the folder that holds your vault.
 
-New to Claude Code? On Windows PowerShell: `irm https://claude.ai/install.ps1 | iex`. On macOS,
-Linux, or WSL: `curl -fsSL https://claude.ai/install.sh | bash`. Reopen the terminal, then run
-`claude doctor` to confirm. You need a Claude account on a plan that includes Claude Code.
+Either way, then say **"onboard me"**. The `onboard` skill connects your computer to the live
+vault, sets you up, checks your experience level, scaffolds a vault, asks the few highest-leverage
+questions, and gives you a quick first win, adapting as it goes. Full setup for both paths,
+including per-platform install commands, is in `skills/onboard/references/setup.md`.
+
+You need a Claude account on a plan that includes Claude Code or Cowork.
 
 ## What it installs
 
 Five skills and two hooks:
 
-- `onboard` : first-run setup plus a fast, adaptive interview that gets you productive quickly.
+- `onboard` : connects your computer to the vault, then a fast, adaptive interview to get you
+  productive quickly.
 - `elicit` : the deeper interview that keeps learning you over time.
 - `scaffold` : creates the vault tree (raw, wiki, oplog, quarantine, constitution).
+- `spec` : spec-driven build work (specify, plan, tasks, build) through the proposal-first gate.
 - `promote` : the governed gate from raw to wiki to canon, writing the oplog.
 - `hooks/load-vault-context.sh` : on session start, loads your index, read only, and points
   first-run users to `onboard`.
 - `hooks/capture-to-raw.sh` : on session end, captures a stub to the raw tier only, never canon.
+
+The hooks are a Claude Code feature. In Cowork the same jobs are handled by the connected folder
+and the onboard flow.
 
 ## The vault it builds
 
