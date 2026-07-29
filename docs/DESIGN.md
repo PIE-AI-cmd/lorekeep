@@ -55,6 +55,26 @@ When new information contradicts canon, the change is surfaced as a diff into qu
 written across related pages unattended. The ripple proposes, the human disposes, through the
 promote gate.
 
+## Verify's finding classes
+
+Decay is not one thing. Verify sweeps five classes: structural (broken links, orphans, index
+entries that do not resolve), governance (canon changes with no oplog entry), referent existence
+(claims naming external, machine-checkable things — model IDs, API versions, dependency
+versions, crawler user agents — carry a last-verified date and are checked against the current
+source of truth), staleness and volatility (a high-volatility claim stored as if static carries
+a revalidation cadence), and measurement honesty (a value must distinguish measured-low from
+never-measured; a silent default is how canon lies later). Findings are keyed (path, rule) so
+reruns update rather than duplicate, auto-resolve when their condition clears, and travel as
+proposals through the same gate as everything else.
+
+Two boundaries matter. Machine-checkable claims (paths, git state, versions, URL liveness) are
+checked automatically; positional claims (stances, style rules, preferences) cannot be, so they
+carry a date stamp and a human cadence — sweeping them together means the checkable claims
+never get checked. And a canon rule the current environment cannot satisfy is raised, at read
+time where possible and by the sweep as backstop, never silently failed: precedence gives canon
+maximum blast radius, so a stale rule outranks the agent's own eyes by design and must announce
+itself when it breaks.
+
 ## Precedence
 
 Four tiers resolve every conflict at selection time: user canon, then user skills, then forks of

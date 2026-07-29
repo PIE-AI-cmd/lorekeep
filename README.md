@@ -45,14 +45,18 @@ You need a Claude account on a plan that includes Claude Code or Cowork.
 
 ## What it installs
 
-Five skills and two hooks:
+Seven skills and two hooks:
 
 - `onboard` : connects your computer to the vault, then a fast, adaptive interview to get you
   productive quickly.
 - `elicit` : the deeper interview that keeps learning you over time.
 - `scaffold` : creates the vault tree (raw, wiki, oplog, quarantine, constitution).
+- `ingest` : captures a source verbatim to raw and surfaces contradictions with canon as ripple
+  proposals at the door.
 - `spec` : spec-driven build work (specify, plan, tasks, build) through the proposal-first gate.
 - `promote` : the governed gate from raw to wiki to canon, writing the oplog.
+- `verify` : the scheduled decay sweep — broken links, orphan promotions, stale referents —
+  reported as keyed findings, proposals only, never fixes.
 - `hooks/load-vault-context.sh` : on session start, loads your index, read only, and points
   first-run users to `onboard`.
 - `hooks/capture-to-raw.sh` : on session end, captures a stub to the raw tier only, never canon.
