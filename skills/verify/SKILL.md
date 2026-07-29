@@ -22,8 +22,9 @@ looking for each class of rot and reports findings as proposals. It never repair
    did not cover rather than implying it covered everything.
 3. Findings are keyed and lifecycled. A finding is keyed (path, rule) so reruns update it
    rather than duplicate it, and a finding whose condition has cleared auto-resolves.
-4. Directional findings say so. A heuristic finding is labelled directional, never presented
-   with the confidence of a measured one.
+4. Every claim carries its evidence class. A finding labels each claim Observed, Assessment,
+   or Not verified. A heuristic judgment is an Assessment, never presented with the confidence
+   of an observation; missing data is Not verified, never guessed.
 5. Machine-checkable and positional claims part ways. A claim about paths, git state, versions,
    or URL liveness is checked automatically. A positional claim — a stance, a style rule, a
    preference — cannot be, so it carries a date stamp and a human review cadence instead.
@@ -54,8 +55,8 @@ looking for each class of rot and reports findings as proposals. It never repair
 4. Check referent-existence claims that are due. Record the check in the finding, not the page.
 5. Flag staleness, volatility, and measurement-honesty findings.
 6. Emit one report of keyed findings into quarantine/, each carrying type, path, rule,
-   severity, detail, and a proposed action, auto-resolving any prior finding whose condition
-   has cleared.
+   severity, evidence class (Observed, Assessment, or Not verified), detail, and a proposed
+   action, auto-resolving any prior finding whose condition has cleared.
 7. Offer the user the promote gate for any proposed fix. Apply nothing.
 
 ## Desired output

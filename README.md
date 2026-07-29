@@ -45,7 +45,7 @@ You need a Claude account on a plan that includes Claude Code or Cowork.
 
 ## What it installs
 
-Seven skills and two hooks:
+Nine skills and two hooks:
 
 - `onboard` : connects your computer to the vault, then a fast, adaptive interview to get you
   productive quickly.
@@ -57,6 +57,10 @@ Seven skills and two hooks:
 - `promote` : the governed gate from raw to wiki to canon, writing the oplog.
 - `verify` : the scheduled decay sweep — broken links, orphan promotions, stale referents —
   reported as keyed findings, proposals only, never fixes.
+- `curiosity` : the question queue and per-session drip that keeps learning you between
+  interviews, fed by the gaps ingest and verify surface.
+- `scout` : inventories installed skills, agents, and plugins, diffs against last time, and
+  proposes adoptions, precedence placements, and de-fangings.
 - `hooks/load-vault-context.sh` : on session start, loads your index, read only, and points
   first-run users to `onboard`.
 - `hooks/capture-to-raw.sh` : on session end, captures a stub to the raw tier only, never canon.

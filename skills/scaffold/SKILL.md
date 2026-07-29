@@ -38,6 +38,7 @@ offer to fill only the missing pieces.
     oplog.md                    # append only promotion and demotion ledger
     projects/  tools/  clients/  decisions/  people/  concepts/
   quarantine/                   # ripple proposals and material pending promotion
+    questions.md                # the curiosity queue, seeded empty
 ```
 
 ## Process
@@ -49,7 +50,8 @@ offer to fill only the missing pieces.
    what-you-never-do list. Leave all user specific content blank.
 4. Seed `wiki/index.md` with the where-to-look table and the index first rule.
 5. Seed `wiki/oplog.md` with the append only header and an empty entry list.
-6. Report what was created. Point the user to elicit to start filling raw.
+6. Seed `quarantine/questions.md` with the queue header and an empty list.
+7. Report what was created. Point the user to elicit to start filling raw.
 
 ## Desired output
 

@@ -92,6 +92,18 @@ the policy.
   edits through the same gate.
 - Feedback: after meaningful output, ask how it did and capture the answer to raw.
 
+## The curiosity loop
+
+Learning is continuous, not an event. Gaps the system notices — an unexplained term at ingest,
+an unmeasured value in a sweep, an entity a session touches that has no index entry, a dated
+answer past its cadence — land in a question queue in quarantine. Each session spends a small
+question budget, one or two, on the highest-leverage entries at a natural moment; answers are
+captured to raw and rise through the same gate as everything else. Scout applies the same
+discipline to the capability layer: inventory the installed skills, agents, and plugins,
+snapshot to raw, diff against last time, and propose adoptions, precedence placements,
+de-fangings, and retirements. The queue, the budget, and the diff keep the system evolving
+without ever writing canon unattended.
+
 ## Open core
 
 The governance primitives are the open core: elicit, the promotion gate, the oplog, index first
